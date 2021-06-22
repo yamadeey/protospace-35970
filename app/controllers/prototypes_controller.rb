@@ -8,7 +8,7 @@ class PrototypesController < ApplicationController
 
   def index
     @prototype = Prototype.all.includes(:user)
- end
+  end
 
   def new
     @prototype = Prototype.new
