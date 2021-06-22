@@ -72,11 +72,11 @@ class PrototypesController < ApplicationController
     end
   end
 
-  def move_to_destroy
-    unless user_signed_in?
-      redirect_to action: :index
-    end
-  end
+  # def move_to_destroy
+  #   unless user_signed_in?
+  #     redirect_to action: :index
+  #   end
+  # end
   # def move_to_index
   #   prototype = Prototype.find(params[:id])
   #   if prototype.user_id != current_user.id
