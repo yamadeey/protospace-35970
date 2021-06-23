@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
-  before_action :move_to_edit, except: [:index, :show]
-  before_action :authenticate_user!, only: [:index, :show, :new]
+  before_action :move_to_edit, except: [:show, :index]
   #def Prototypes_params
     #params.require(:Prototypes).permit(:content, :image).merge(user_id: current_user.id)
   #end
